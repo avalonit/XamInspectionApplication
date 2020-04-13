@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:KobApp" x:Class="KobApp.AddReportLight" xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+	<Grid Margin="0" RowSpacing="0">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<Grid x:Name="headerGrid" ColumnSpacing="0">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="60" />
+				<ColumnDefinition Width="60" />
+			</Grid.ColumnDefinitions>
+			<local:SearchBarExt x:Name="filterText" Grid.Row="0" Grid.Column="0" IsVisible="true" Placeholder="Search here to filter" TextChanged="OnFilterTextChanged">
+				<local:SearchBarExt.HeightRequest>
+					<OnPlatform x:TypeArguments="x:Double" Android="50" iOS="50">
+						<OnPlatform.WinPhone>
+							<OnIdiom x:TypeArguments="x:Double">
+								<OnIdiom.Phone>40</OnIdiom.Phone>
+								<OnIdiom.Tablet>40</OnIdiom.Tablet>
+							</OnIdiom>
+						</OnPlatform.WinPhone>
+					</OnPlatform>
+				</local:SearchBarExt.HeightRequest>
+			</local:SearchBarExt>
+			<local:SfImage Source="{Binding SortIcon}" x:Name="sortImage" Grid.Column="1" HeightRequest="25" WidthRequest="25" HorizontalOptions="Center" VerticalOptions="Center" />
+			<local:SfImage Source="{Binding CenterIcon}" x:Name="centerImage" Grid.Column="2" HeightRequest="25" WidthRequest="25" HorizontalOptions="Center" VerticalOptions="Center" />
+		</Grid>
+		<sync:SfListView x:Name="listView" Grid.Row="1" ItemSpacing="0,5,0,5" ItemSize="50" SelectionBackgroundColor="#E4E4E4">
+			<sync:SfListView.ItemTemplate>
+				<DataTemplate x:Name="ItemTemplate" x:Key="ItemTemplate">
+					<Frame OutlineColor="Gray" BackgroundColor="White" Padding="5" Margin="10,0,10,0">
+						<Frame.HasShadow>
+							<OnPlatform x:TypeArguments="x:Boolean" Android="True" WinPhone="True" iOS="False" />
+						</Frame.HasShadow>
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="90*" />
+								<ColumnDefinition Width="20*" />
+							</Grid.ColumnDefinitions>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*" />
+								<RowDefinition Height="Auto" />
+							</Grid.RowDefinitions>
+							<StackLayout Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+								<Label x:Name="TitleLabel" LineBreakMode="NoWrap" Text="{Binding stop_code}" FontAttributes="Bold" TextColor="Black">
+									<Label.FontSize>
+										<OnPlatform x:TypeArguments="x:Double">
+											<OnPlatform.WinPhone>
+												<OnIdiom x:TypeArguments="x:Double" Phone="18" Tablet="20" />
+											</OnPlatform.WinPhone>
+											<OnPlatform.Android>
+												<OnIdiom x:TypeArguments="x:Double" Phone="16" Tablet="18" />
+											</OnPlatform.Android>
+											<OnPlatform.iOS>
+												<OnIdiom x:TypeArguments="x:Double" Phone="16" Tablet="18" />
+											</OnPlatform.iOS>
+										</OnPlatform>
+									</Label.FontSize>
+								</Label>
+								<Label x:Name="DistanceLabel" Text="{Binding stop_distance_txt}" TextColor="Teal">
+									<Label.FontSize>
+										<OnPlatform x:TypeArguments="x:Double">
+											<OnPlatform.WinPhone>
+												<OnIdiom x:TypeArguments="x:Double" Phone="12" Tablet="12" />
+											</OnPlatform.WinPhone>
+											<OnPlatform.Android>
+												<OnIdiom x:TypeArguments="x:Double" Phone="12" Tablet="14" />
+											</OnPlatform.Android>
+											<OnPlatform.iOS>
+												<OnIdiom x:TypeArguments="x:Double" Phone="12" Tablet="14" />
+											</OnPlatform.iOS>
+										</OnPlatform>
+									</Label.FontSize>
+								</Label>
+								<Label x:Name="DescriptionLabel" Text="{Binding stop_name}" TextColor="Teal">
+									<Label.FontSize>
+										<OnPlatform x:TypeArguments="x:Double">
+											<OnPlatform.WinPhone>
+												<OnIdiom x:TypeArguments="x:Double" Phone="12" Tablet="12" />
+											</OnPlatform.WinPhone>
+											<OnPlatform.Android>
+												<OnIdiom x:TypeArguments="x:Double" Phone="12" Tablet="14" />
+											</OnPlatform.Android>
+											<OnPlatform.iOS>
+												<OnIdiom x:TypeArguments="x:Double" Phone="12" Tablet="14" />
+											</OnPlatform.iOS>
+										</OnPlatform>
+									</Label.FontSize>
+								</Label>
+							</StackLayout>
+							<Frame Grid.Row="1" Grid.Column="0" Padding="4,2,4,2" BackgroundColor="#FFE7E8E9" HorizontalOptions="Start" VerticalOptions="End">
+								<Frame.HasShadow>
+									<OnPlatform x:TypeArguments="x:Boolean" Android="True" WinPhone="True" iOS="False" />
+								</Frame.HasShadow>
+								<Label x:Name="TagLabel" LineBreakMode="NoWrap" Text="{Binding routes_short_names}" FontSize="10" TextColor="Black" />
+							</Frame>
+							<Button Grid.RowSpan="2" Grid.Column="1" x:Name="Select" Text="-&gt;" FontSize="10" TextColor="Black" Clicked="StopClicked" />
+						</Grid>
+					</Frame>
+				</DataTemplate>
+			</sync:SfListView.ItemTemplate>
+		</sync:SfListView>
+	</Grid>
+</ContentPage>

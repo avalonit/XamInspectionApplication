@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{517B9D88-AD96-4BAB-8D7B-68E177DA24D2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>KobApplication</RootNamespace>
+    <AssemblyName>KobApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Controls\MyButton.cs" />
+    <Compile Include="Controls\MyEntry.cs" />
+    <Compile Include="Controls\MyGrid.cs" />
+    <Compile Include="Dashboard.cs" />
+    <Compile Include="DataModel\ActivityModel.cs" />
+    <Compile Include="HelperView\ActivityViewCell.cs" />
+    <Compile Include="HelperView\NewSearchUserViewCell.cs" />
+    <Compile Include="KobApplication.cs" />
+    <Compile Include="MyActivity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HelperView\SearchUserViewCell.cs" />
+    <Compile Include="DataModel\LoginResult.cs" />
+    <Compile Include="DataModel\UsersModel.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="DetailPage.cs" />
+    <Compile Include="LoginPage.cs" />
+    <Compile Include="SearchPage.cs" />
+    <Compile Include="HelperView\TicketsViewCell.cs" />
+    <Compile Include="DataModel\TicketModel.cs" />
+    <Compile Include="TicketBlocksPage.cs" />
+    <Compile Include="DataModel\TicketBlockModel.cs" />
+    <Compile Include="HelperView\TicketBlockModelViewCell.cs" />
+    <Compile Include="DB\KobeAppSQLDB.cs" />
+    <Compile Include="DB\ISQLite.cs" />
+    <Compile Include="DB\Business\InspectionsBusiness.cs" />
+    <Compile Include="DB\Interfaces\IInspections.cs" />
+    <Compile Include="DataModel\InspectionsModel.cs" />
+    <Compile Include="MyReports.cs" />
+    <Compile Include="AddReport.cs" />
+    <Compile Include="DataModel\InspectorsModel.cs" />
+    <Compile Include="DB\Data\InspectionsDataLayerSQL.cs" />
+    <Compile Include="DB\Business\InspectorsBusiness.cs" />
+    <Compile Include="DB\Interfaces\IInspectors.cs" />
+    <Compile Include="DB\Data\InspectorsDataLayerRealm.cs" />
+    <Compile Include="DataModel\InspectorsRealmModel.cs" />
+    <Compile Include="DB\Interfaces\IInspectorsRealm.cs" />
+    <Compile Include="InspectorsList.cs" />
+    <Compile Include="HelperView\InspectorsListViewCell.cs" />
+    <Compile Include="HelperView\Interfaces\IAddReport.cs" />
+    <Compile Include="DataModel\InspectionInspectorsModel.cs" />
+    <Compile Include="HelperView\InspectionInspectorsViewCell.cs" />
+    <Compile Include="MyReportsLight.cs" />
+    <Compile Include="AddInspection.cs" />
+    <Compile Include="Sync.cs" />
+    <Compile Include="DataModel\AreasModel.cs" />
+    <Compile Include="DB\Business\AreasBusiness.cs" />
+    <Compile Include="DB\Data\AreasDataLayerRealm.cs" />
+    <Compile Include="DataModel\AreasRealmModel.cs" />
+    <Compile Include="DataModel\LinesModel.cs" />
+    <Compile Include="DataModel\LinesRealmModel.cs" />
+    <Compile Include="DataModel\GeoCountriesModel.cs" />
+    <Compile Include="DataModel\GeoCountriesRealmModel.cs" />
+    <Compile Include="DataModel\GeoComuniITModel.cs" />
+    <Compile Include="DataModel\GeoComuniITRealmModel.cs" />
+    <Compile Include="DataModel\GeoProvinceITModel.cs" />
+    <Compile Include="DataModel\GeoProvinceITRealmModel.cs" />
+    <Compile Include="DataModel\MotiviSanzioniModel.cs" />
+    <Compile Include="DataModel\MotiviSanzioniRealmModel.cs" />
+    <Compile Include="DataModel\TipoDocumentoModel.cs" />
+    <Compile Include="DataModel\TipoDocumentoRealmModel.cs" />
+    <Compile Include="DataModel\TipoTitoloEvasoModel.cs" />
+    <Compile Include="DataModel\TipoTitoloEvasoRealmModel.cs" />
+    <Compile Include="DB\Business\GeoComuniITBusiness.cs" />
+    <Compile Include="DB\Data\GeoComuniITDataLayerRealm.cs" />
+    <Compile Include="DB\Business\GeoCountriesBusiness.cs" />
+    <Compile Include="DB\Data\GeoCountriesDataLayerRealm.cs" />
+    <Compile Include="DB\Business\GeoProvinceITBusiness.cs" />
+    <Compile Include="DB\Data\GeoProvinceITDataLayerRealm.cs" />
+    <Compile Include="DB\Business\LinesBusiness.cs" />
+    <Compile Include="DB\Data\LinesDataLayerRealm.cs" />
+    <Compile Include="DB\Business\MotiviSanzioniBusiness.cs" />
+    <Compile Include="DB\Data\MotiviSanzioniDataLayerRealm.cs" />
+    <Compile Include="DB\Business\TipoDocumentoBusiness.cs" />
+    <Compile Include="DB\Data\TipoDocumentoDataLayerRealm.cs" />
+    <Compile Include="DB\Business\TipoTitoloEvasoBusiness.cs" />
+    <Compile Include="DB\Data\TipoTitoloEvasoDataLayerRealm.cs" />
+    <Compile Include="HelperView\AreasViewCell.cs" />
+    <Compile Include="HelperView\LinesViewCell.cs" />
+    <Compile Include="AddReportBaseTest.cs" />
+    <Compile Include="StartReportLight.cs" />
+    <Compile Include="DB\Data\StopsDataLayerRealm.cs" />
+    <Compile Include="DataModel\StopsModel.cs" />
+    <Compile Include="DataModel\StopsRealmModel.cs" />
+    <Compile Include="DB\Business\StopsBusiness.cs" />
+    <Compile Include="AddReportLight.xaml.cs">
+      <DependentUpon>AddReportLight.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HelperView\PickerExt.cs" />
+    <Compile Include="HelperView\SearchBarExt.cs" />
+    <Compile Include="APIServices\ApiServices.cs" />
+    <Compile Include="DataModel\CalendarDatesModel.cs" />
+    <Compile Include="DataModel\CalendarDatesRealModel.cs" />
+    <Compile Include="DB\Data\CalendarDatesDataLayerRealm.cs" />
+    <Compile Include="DB\Business\CalendarDatesBusiness.cs" />
+    <Compile Include="DataModel\RoutesModel.cs" />
+    <Compile Include="DataModel\RoutesRealmModel.cs" />
+    <Compile Include="DB\Data\RoutesDataLayerRealm.cs" />
+    <Compile Include="DB\Business\RoutesBusiness.cs" />
+    <Compile Include="DataModel\TripsModel.cs" />
+    <Compile Include="DataModel\TripsRealmModel.cs" />
+    <Compile Include="DB\Data\TripsDataLayerRealm.cs" />
+    <Compile Include="DB\Business\TripsBusiness.cs" />
+    <Compile Include="DataModel\StopTimesModel.cs" />
+    <Compile Include="DataModel\StopTimesRealmModel.cs" />
+    <Compile Include="DB\Data\StopTimesDataLayerRealm.cs" />
+    <Compile Include="DB\Business\StopTimesBusiness.cs" />
+    <Compile Include="ViewModels\ReportLightViewModel.cs" />
+    <Compile Include="Helpers\DistanceHelper.cs" />
+    <Compile Include="Helpers\FilesHelper.cs" />
+    <Compile Include="Helpers\Settings.cs" />
+  </ItemGroup>
+  <Import Project="..\NFCFormsSample\NFCFormsSample.projitems" Label="Shared" Condition="Exists('..\NFCFormsSample\NFCFormsSample.projitems')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.2.0.0.6490\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.0.0.6490\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp.Portable.Core">
+      <HintPath>..\packages\FubarCoder.RestSharp.Portable.Core.3.3.0\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\RestSharp.Portable.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp.Portable.HttpClient">
+      <HintPath>..\packages\FubarCoder.RestSharp.Portable.HttpClient.3.3.0\lib\portable-net45+dnxcore50+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\RestSharp.Portable.HttpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.3.0\lib\portable-net45+wp80+win8+wpa81\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.3.0\lib\portable-net45+wp80+win8+wpa81\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="NdefLibrary">
+      <HintPath>..\packages\NdefLibrary.3.1.1\lib\portable-net45+win8+wp8+wpa81\NdefLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq">
+      <HintPath>..\packages\Remotion.Linq.2.1.1\lib\portable-net45+win+wpa81+wp80\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetCross.Memory.Unsafe">
+      <HintPath>..\packages\DotNetCross.Memory.Unsafe.0.2.3.4\lib\netstandard1.0\DotNetCross.Memory.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="FubarCoder.RestSharp.Portable.Core">
+      <HintPath>..\packages\FubarCoder.RestSharp.Portable.Core.4.0.8\lib\portable45-net45+win8+wp8+wpa81\FubarCoder.RestSharp.Portable.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FubarCoder.RestSharp.Portable.HttpClient">
+      <HintPath>..\packages\FubarCoder.RestSharp.Portable.HttpClient.4.0.8\lib\portable45-net45+win8+wp8+wpa81\FubarCoder.RestSharp.Portable.HttpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.Net.Mobile.Core">
+      <HintPath>..\packages\ZXing.Net.Mobile.2.2.9\lib\portable-net45+netcore45+wpa81+wp8\ZXing.Net.Mobile.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.portable">
+      <HintPath>..\packages\ZXing.Net.Mobile.2.2.9\lib\portable-net45+netcore45+wpa81+wp8\zxing.portable.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXingNetMobile">
+      <HintPath>..\packages\ZXing.Net.Mobile.2.2.9\lib\portable-net45+netcore45+wpa81+wp8\ZXingNetMobile.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.Net.Mobile.Forms">
+      <HintPath>..\packages\ZXing.Net.Mobile.Forms.2.2.9\lib\portable-net45+netcore45+wpa81+wp8\ZXing.Net.Mobile.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Geolocator.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Geolocator.3.0.4\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.Geolocator.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Geolocator">
+      <HintPath>..\packages\Xam.Plugin.Geolocator.3.0.4\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.Geolocator.dll</HintPath>
+    </Reference>
+    <Reference Include="FubarCoder.RestSharp.Portable.Encodings">
+      <HintPath>..\packages\FubarCoder.RestSharp.Portable.Encodings.4.0.8\lib\portable40-net40+sl5+win8+wp8+wpa81\FubarCoder.RestSharp.Portable.Encodings.dll</HintPath>
+    </Reference>
+    <Reference Include="ModernHttpClient">
+      <HintPath>..\packages\modernhttpclient.2.4.2\lib\Portable-Net45+WinRT45+WP8+WPA81\ModernHttpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage.Abstractions">
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac\PCLStorage.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage">
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac\PCLStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="Realm.DataBinding">
+      <HintPath>..\packages\Realm.DataBinding.1.1.0\lib\netstandard1.0\Realm.DataBinding.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core">
+      <HintPath>..\packages\SQLitePCLRaw.core.1.1.5\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.5\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCLRaw.batteries_green.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.5\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Core.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.15.2.0.40\lib\portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Syncfusion.Core.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.GridCommon.Portable">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.15.2.0.40\lib\portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Syncfusion.GridCommon.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfListView.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfListView.15.2.0.40\lib\portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Syncfusion.SfListView.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DataSource.Portable">
+      <HintPath>..\packages\Syncfusion.Xamarin.DataSource.15.2.0.40\lib\portable-win+net45+wp80+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Syncfusion.DataSource.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Realm">
+      <HintPath>..\packages\Realm.Database.1.4.0\lib\portable-net45+sl5+wp8+wpa81+win8+monoandroid+Xamarin.iOS10+monotouch+Xamarin.Mac\Realm.dll</HintPath>
+    </Reference>
+    <Reference Include="Realm.Sync">
+      <HintPath>..\packages\Realm.1.4.0\lib\portable-net45+sl5+wp8+wpa81+win8+monoandroid+Xamarin.iOS10+monotouch+Xamarin.Mac\Realm.Sync.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.5.8\lib\portable-net45+wp80+win8+wpa81\Plugin.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.5.8\lib\portable-net45+wp80+win8+wpa81\Plugin.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Poz1.NFCForms.Abstract">
+      <HintPath>..\packages\NFCForms.2.3.2\lib\portable-net45+wp8+win8+MonoAndroid10+MonoTouch10\Poz1.NFCForms.Abstract.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net">
+      <HintPath>..\packages\sqlite-net-pcl.1.3.3\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\TodoAzure\TodoAzure.csproj">
+      <Project>{3AFA591D-C115-4AC9-9519-F788373ECDE9}</Project>
+      <Name>TodoAzure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\ListView\SortIcon.png" />
+    <EmbeddedResource Include="AddReportLight.xaml" />
+    <EmbeddedResource Include="Icons\ListView\LocationIcon.png" />
+  </ItemGroup>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Import Project="..\packages\Fody.2.0.7\build\portable-net+sl+win+wpa+wp\Fody.targets" Condition="Exists('..\packages\Fody.2.0.7\build\portable-net+sl+win+wpa+wp\Fody.targets')" />
+  <Import Project="..\packages\Realm.Database.1.4.0\build\Realm.Database.targets" Condition="Exists('..\packages\Realm.Database.1.4.0\build\Realm.Database.targets')" />
+  <Import Project="..\packages\Realm.1.4.0\build\Realm.targets" Condition="Exists('..\packages\Realm.1.4.0\build\Realm.targets')" />
+  <Import Project="..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+</Project>
